@@ -174,12 +174,33 @@ section {
 }
 
 .logo-text {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 700;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.3rem;
+    transform: skewX(-15deg);
+    line-height: 1;
+}
+
+.logo-part-academia {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.2rem;
     color: var(--text-light);
     text-transform: uppercase;
-    letter-spacing: 1px;
+}
+
+.logo-part-for {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.8rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: -1.5px;
+}
+
+.logo-part-fit {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+    color: var(--primary);
+    font-weight: 700;
 }
 
 .header-actions {

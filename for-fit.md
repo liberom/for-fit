@@ -22,6 +22,38 @@ Títulos: Utiliza fontes Sans-Serif (sem serifa) em Negrito e Caixa Alta (All Ca
 
 Corpo de Texto: Fontes sem serifa mais finas e arredondadas para textos longos, priorizando a clareza.
 
+Details:
+Para identificar as fontes desse logotipo, precisamos olhar para as duas partes distintas do nome "FOR Fit", que usam estilos bem diferentes. Aqui estão as melhores aproximações:
+
+A. "FOR" (e "ACADEMIA")
+
+Esta é uma fonte **Sans-Serif** (sem serifa), em **Itálico** e com um peso **Extra Bold/Black**. O design é caracterizado por ser muito "quadrado" e robusto.
+
+  * **Aproximação mais próxima:** **[Impact](https://www.google.com/search?q=https://www.myfonts.com/collections/impact-font-linotype)** (em itálico). É a fonte clássica para esse tipo de visual de peso.
+  * **Alternativas Profissionais:**
+      * **[Founders Grotesk X-Condensed Bold Italic](https://klim.co.nz/retail-fonts/founders-grotesk/):** Muito próxima na estrutura das letras.
+      * **[Anton](https://fonts.google.com/specimen/Anton):** Uma opção gratuita do Google Fonts que, se colocada em itálico e levemente comprimida, chega muito perto.
+      * **[Haettenschweiler](https://www.myfonts.com/collections/haettenschweiler-font-microsoft-corporation):** Outra fonte de sistema muito comum que segue essa linha "ultra-bold" comprimida.
+
+B. "Fit"
+
+Esta é uma fonte do tipo **Script/Handwriting** (escrita à mão), também em itálico, com traços fluidos e pontas levemente arredondadas.
+
+  * **Aproximação mais próxima:** **[Brush Script MT](https://www.myfonts.com/collections/brush-script-font-monotype-imaging)**. Note o formato do "F" maiúsculo e a conexão das letras; é quase idêntico ao padrão clássico de pincel.
+  * **Alternativas Gratuitas/Google Fonts:**
+      * **[Dancing Script](https://fonts.google.com/specimen/Dancing+Script):** Tem uma energia similar, embora o "F" seja um pouco mais decorado.
+      * **[Satisfy](https://fonts.google.com/specimen/Satisfy):** Uma fonte script elegante que mantém a legibilidade e o movimento do logo original.
+      * **[Yellowtail](https://fonts.google.com/specimen/Yellowtail):** Mistura o estilo brush com um visual um pouco mais moderno.
+
+
+C. Dica para Design:
+
+No logotipo, as letras foram levemente customizadas (note o espaçamento apertado entre o "F", "O" e "R"). Se você for recriar a arte:
+
+- Use a **Anton** ou **Impact** para o "FOR".
+- Use a **Brush Script** para o "Fit".
+- Aplique um **itálico forçado (slant)** de cerca de 15 a 20 graus para garantir que ambas as fontes sigam a mesma inclinação diagonal da marca.
+
 4. Estilo de Imagem (Fotografia)
 Filtros: As fotos possuem um tratamento de baixo brilho e alto contraste. Há uma vinheta escura nas bordas para direcionar o olhar para o centro.
 
