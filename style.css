@@ -1,0 +1,550 @@
+/* Base Styles & Variables */
+:root {
+    --primary: #FDCB05;
+    --primary-hover: #e2b604;
+    --bg-dark: #111111;
+    --bg-darker: #0a0a0a;
+    --text-light: #f5f5f5;
+    --text-muted: #aaaaaa;
+    
+    --font-heading: 'Oswald', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.text-center { text-align: center; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-4 { margin-top: 1.5rem; }
+.w-full { width: 100%; }
+
+.highlight {
+    color: var(--primary);
+}
+.highlight-text {
+    color: var(--primary);
+    font-family: var(--font-heading);
+}
+
+.bg-darker {
+    background-color: var(--bg-darker);
+}
+
+/* Containers Layout */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+.text-center .section-title {
+    display: block;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary);
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.5rem;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--bg-dark);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(253, 203, 5, 0.3);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border-color: var(--text-light);
+    color: var(--text-light);
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-large {
+    padding: 1rem 2.5rem;
+    font-size: 1.3rem;
+}
+
+.link-yellow {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 0.5rem;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.lang-toggle {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lang-toggle span.active {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px; 
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 100%);
+    box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.9);
+    z-index: -1;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    max-width: 800px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-light);
+    max-width: 600px;
+}
+
+.hero-subtitle span {
+    font-weight: 300;
+}
+
+/* Benefits */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-card {
+    background-color: var(--bg-darker);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.benefit-card p {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* Split Banner 1 & 2 */
+.split-banner {
+    padding: 0;
+}
+.split-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    padding: 0;
+    max-width: 100%;
+}
+.row-reverse .split-container {
+    flex-direction: row-reverse;
+}
+.split-text {
+    flex: 1;
+    min-width: 300px;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.split-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.split-text h3 {
+    font-size: 3.5rem;
+}
+.split-image {
+    flex: 1;
+    min-width: 300px;
+    min-height: 400px;
+}
+.split-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Therapy Section */
+.therapy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.therapy-list ul {
+    list-style: none;
+}
+
+.therapy-list li {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.therapy-list li:hover {
+    color: var(--text-light);
+}
+
+.therapy-list .bullet {
+    width: 12px;
+    height: 12px;
+    background-color: var(--primary);
+    display: inline-block;
+    margin-right: 15px;
+    transform: rotate(45deg);
+}
+
+.therapy-conclusion {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    border-left: 4px solid var(--primary);
+    padding-left: 1rem;
+}
+
+.therapy-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* Quote Banner */
+.quote-banner {
+    background-color: var(--primary);
+    color: var(--bg-dark);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.quote-banner blockquote {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Instagram Section */
+.ig-placeholder-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-top: 2rem;
+}
+
+.ig-card {
+    background-color: #222;
+    aspect-ratio: 1 / 1;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    background-image: url('./assets/disciplina.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(80%) contrast(1.2);
+    transition: var(--transition);
+}
+
+.ig-card:nth-child(even) {
+    background-image: url('./assets/lembre.jpg');
+}
+
+.ig-card:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+/* Contact & Location */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+
+.map-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.contact-info {
+    background-color: #000000;
+    padding: 2.5rem;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--primary);
+}
+
+.contact-logo {
+    width: 150px;
+    margin-bottom: 2rem;
+}
+
+.contact-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--bg-dark);
+    padding: 3rem 0;
+    border-top: 1px solid #222;
+}
+.footer-logo {
+    height: 50px;
+    opacity: 0.5;
+}
+
+/* Floating WhatsApp */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 999;
+    transition: var(--transition);
+}
+
+.floating-whatsapp svg {
+    width: 35px;
+    height: 35px;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(253, 203, 5, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .therapy-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-title {
+        font-size: 3rem;
+    }
+    .ig-placeholder-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .hidden-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+    }
+    .hero-overlay {
+        background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.9) 100%);
+    }
+    .split-container {
+        flex-direction: column;
+    }
+    .split-text {
+        text-align: center;
+        padding: 3rem 1.5rem;
+    }
+    .therapy-list li {
+        font-size: 1.4rem;
+    }
+    .quote-banner blockquote {
+        font-size: 1.8rem;
+    }
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-header {
+        display: none; /* Hide header CTA on very small screens to fit logo and lang switch */
+    }
+}
