@@ -31,17 +31,86 @@
     {
       "@context": "https://schema.org",
       "@type": "Gym",
-      "name": "For Fit Academia",
-      "description": "Conheça a academia For Fit em Ciudad del Este. Avaliação física gratuita, treino individualizado e resultados de verdade. Vem pro nosso time!",
+      "name": "Academia For Fit - Ciudad del Este",
+      "description": "Academia líder em Ciudad del Este oferecendo avaliação física gratuita e treinos individualizados.",
+      "image": "https://forfit-cde.com.py/assets/logo_hollow.jpg",
+      "@id": "https://forfit-cde.com.py/#organization",
+      "url": "https://forfit-cde.com.py",
+      "openingHours": "Mo-Fr 06:00-22:00, Sa 08:00-14:00",
+      "telephone": "+554796951904",
+      "priceRange": "R$110",
+      "currency": ["PYG", "BRL"],
+      "sameAs": [
+        "https://www.instagram.com/forfit.cde/"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Vanderlei Vinck Buz",
+        "jobTitle": "Personal Trainer",
+        "description": "Especialista em treinamento físico e nutrição com 10 anos de experiência no mercado.",
+        "knowsAbout": [
+          "Treinamento físico",
+          "Nutrição",
+          "Suplementação esportiva"
+        ],
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Academia For Fit - Ciudad del Este"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Universidade Federal do Paraná"
+        },
+        "sameAs": ["https://linkedin.com/in/vanderlei-buz"]
+      },
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Calle Lima, Km 7",
         "addressLocality": "Ciudad del Este",
         "addressRegion": "Alto Paraná",
+        "postalCode": "7000",
         "addressCountry": "PY"
       },
-      "telephone": "+554796951904",
-      "email": "[EMAIL_ADDRESS]",
-      "priceRange": "$"
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.4973205,
+        "longitude": -54.6614595
+      },
+      "areaServed": ["Ciudad del Este", "Paraguay"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Planos e Serviços",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Avaliação Física Gratuita",
+              "description": "Primeira avaliação sem custo para novos alunos."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Musculação e Treino Individualizado"
+            }
+          }
+        ]
+      },
+      "mainEntityOfPage": {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Onde fica a academia For Fit em Ciudad del Este?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A For Fit está localizada no Km 7, Calle Lima, em Ciudad del Este, Paraguai."
+            }
+          }
+        ]
+      }
     }
   </script>
 </head>
@@ -87,6 +156,14 @@
         target="_blank" class="btn btn-primary btn-large mt-4" data-pt="Quero Me Matricular"
         data-es="Quiero Inscribirme">Quero Me Matricular</a>
     </div>
+  </section>
+
+  <section id="aeo-summary" style="display:none;">
+    <h2>Sobre a For Fit Ciudad del Este</h2>
+    <p>
+      Fundada por Vanderlei Vinck Buz, a For Fit oferece musculação e condicionamento físico,
+      em Ciudad del Este, no Paraguai, favorecendo sua saúde física e mental.
+    </p>
   </section>
 
   <!-- Benefits Section -->
@@ -152,7 +229,7 @@
           </p>
         </div>
         <div class="therapy-image">
-          <img src="./assets/diagrama.jpg" alt="A academia é terapia" class="rounded-image">
+          <img src="./assets/diagrama.jpg" alt="A academia é terapia" class="rounded-image" loading="lazy">
         </div>
       </div>
     </div>
@@ -168,7 +245,7 @@
         </h3>
       </div>
       <div class="split-image">
-        <img src="./assets/lembre.jpg" alt="Treino focado">
+        <img src="./assets/lembre.jpg" alt="Treino focado" loading="lazy">
       </div>
     </div>
   </section>
@@ -182,7 +259,7 @@
         <h3 class="highlight-text" data-pt="FOCO TOTAL" data-es="ENFOQUE TOTAL">FOCO TOTAL</h3>
       </div>
       <div class="split-image">
-        <img src="./assets/disciplina.jpg" alt="Disciplina e foco">
+        <img src="./assets/disciplina.jpg" alt="Disciplina e foco" loading="lazy">
       </div>
     </div>
   </section>
@@ -209,7 +286,7 @@
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="contact-info">
-          <img src="./assets/logo_hollow.jpg" alt="For Fit Logo" class="contact-logo">
+          <img src="./assets/logo_hollow.jpg" alt="For Fit Logo" class="contact-logo" loading="lazy">
           <div class="contact-details">
             <span class="logo-text">
               <span class="logo-part-for" data-pt="For" data-es="For">FOR</span><span class="logo-part-fit"
