@@ -16,6 +16,7 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://liberom.github.io/for-fit/assets/logo_hollow.jpg">
 
+  <link rel="canonical" href="https://forfit-cde.com.py">
   <link rel="icon" type="image/jpeg" href="https://liberom.github.io/for-fit/assets/logo_mini_transparent.png">
 
   <!-- Google Fonts -->
@@ -77,7 +78,14 @@
         "latitude": -25.4973205,
         "longitude": -54.6614595
       },
-      "areaServed": ["Ciudad del Este", "Paraguay"],
+      "areaServed": {
+        "@type": "City",
+        "name": "Ciudad del Este",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Alto Paraná"
+        }
+      },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Planos e Serviços",
