@@ -14,9 +14,9 @@
   <meta property="og:description"
     content="Conheça a academia For Fit em Ciudad del Este. Avaliação física gratuita, treino individualizado e resultados de verdade. Vem pro nosso time!">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="./assets/logo_hollow.jpg">
+  <meta property="og:image" content="https://liberom.github.io/for-fit/assets/logo_hollow.jpg">
 
-  <link rel="icon" type="image/jpeg" href="./assets/logo_mini_transparent.png">
+  <link rel="icon" type="image/jpeg" href="https://liberom.github.io/for-fit/assets/logo_mini_transparent.png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,12 +28,13 @@
   <link rel="stylesheet" href="style.css">
 
   <script type="application/ld+json">
+    [
     {
       "@context": "https://schema.org",
       "@type": "Gym",
       "name": "Academia For Fit - Ciudad del Este",
       "description": "Academia líder em Ciudad del Este oferecendo avaliação física gratuita e treinos individualizados.",
-      "image": "https://forfit-cde.com.py/assets/logo_hollow.jpg",
+      "image": "https://liberom.github.io/for-fit/assets/logo_hollow.jpg",
       "@id": "https://forfit-cde.com.py/#organization",
       "url": "https://forfit-cde.com.py",
       "openingHours": "Mo-Fr 06:00-22:00, Sa 08:00-14:00",
@@ -108,11 +109,84 @@
               "@type": "Answer",
               "text": "A For Fit está localizada no Km 7, Calle Lima, em Ciudad del Este, Paraguai."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "Quais os horários de funcionamento?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Funcionamos de segunda a sexta das 06:00 às 22:00, e aos sábados das 08:00 às 14:00."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Qual o valor da mensalidade?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nossos planos começam a partir de R$ 110. Aceitamos pagamentos em Reais e Guaranis."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Preciso agendar a avaliação física gratuita?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim, recomendamos agendar a avaliação física gratuita pelo nosso WhatsApp com antecedência."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Posso cancelar meu plano facilmente?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim, nossos planos não possuem fidelidade rígida e o cancelamento é facilitado."
+            }
           }
         ]
       }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Benefícios",
+        "item": "https://forfit-cde.com.py/#beneficios"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Terapia e Bem-estar",
+        "item": "https://forfit-cde.com.py/#terapia"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Localização e Contato",
+        "item": "https://forfit-cde.com.py/#contato"
+      },{
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Perguntas Frequentes",
+        "item": "https://forfit-cde.com.py/#faq"
+      }]
     }
+    ]
   </script>
+
+  <!-- Critical Inline CSS for Multi-Language Toggling -->
+  <style>
+    html[lang="pt-BR"] [lang="es"] {
+      display: none !important;
+    }
+
+    html[lang="es"] [lang="pt"] {
+      display: none !important;
+    }
+
+    .d-inline-group {
+      display: inline;
+    }
+  </style>
 </head>
 
 <body>
@@ -121,10 +195,11 @@
   <header class="header">
     <div class="container header-content">
       <a href="#" class="logo">
-        <img src="./assets/logo_mini_transparent.png" alt="For Fit Logo" loading="lazy">
+        <img src="https://liberom.github.io/for-fit/assets/logo_mini_transparent.png" alt="For Fit Logo" loading="lazy">
         <span class="logo-text">
           <span class="logo-part-for">FOR</span><span class="logo-part-fit">Fit</span>
-          <span class="logo-part-academia">Academia</span>
+          <span lang="pt" class="logo-part-academia">Academia</span>
+          <span lang="es" class="logo-part-academia">Gimnasio</span>
         </span>
       </a>
       <div class="header-actions">
@@ -132,104 +207,149 @@
           <span class="active">PT</span> | <span>ES</span>
         </button>
         <a href="https://wa.me/554796951904?text=Olá,%20vim%20do%20site%20e%20tenho%20interesse%20em%20fazer%20parte%20do%20time%21"
-          target="_blank" class="btn btn-primary cta-header" data-pt="Vem treinar" data-es="Ven a entrenar">Vem
-          treinar</a>
+          target="_blank" class="btn btn-primary cta-header">
+          <span lang="pt">Vem treinar</span>
+          <span lang="es">Ven a entrenar</span>
+        </a>
       </div>
     </div>
   </header>
 
+  <!-- Hidden Breadcrumb for Indexing -->
+  <nav aria-label="Breadcrumb" class="sr-only"
+    style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">
+    <ol>
+      <li><a href="#hero"><span lang="pt">Início</span><span lang="es">Inicio</span></a></li>
+      <li><a href="#beneficios"><span lang="pt">Benefícios</span><span lang="es">Beneficios</span></a></li>
+      <li><a href="#terapia"><span lang="pt">Terapia e Bem-estar</span><span lang="es">Terapia y Bienestar</span></a>
+      </li>
+      <li><a href="#contato"><span lang="pt">Localização e Contato</span><span lang="es">Ubicación y Contacto</span></a>
+      </li>
+      <li><a href="#faq"><span lang="pt">Perguntas Frequentes</span><span lang="es">Preguntas Frecuentes</span></a></li>
+    </ol>
+  </nav>
+
   <!-- Hero Section -->
-  <section class="hero bg-darker">
+  <section class="hero bg-darker" id="hero">
     <div class="container hero-content text-center">
-      <h1 class="hero-title" style="margin-left: auto; margin-right: auto;"
-        data-pt="Chegou em Ciudad del Este e não sabe onde treinar?"
-        data-es="¿Llegaste a Ciudad del Este y no sabes dónde entrenar?">
-        Chegou em Ciudad del Este e não sabe onde treinar?
+      <h1 class="hero-title" style="margin-left: auto; margin-right: auto;">
+        <span lang="pt">Chegou em Ciudad del Este e não sabe onde treinar?</span>
+        <span lang="es">¿Llegaste a Ciudad del Este y no sabes dónde entrenar?</span>
       </h1>
       <p class="hero-subtitle" style="margin-left: auto; margin-right: auto;">
-        <span data-pt="Conheça a academia For Fit." data-es="Conoce el gimnasio For Fit.">Conheça a academia For
-          Fit.</span><br>
-        <strong class="highlight" data-pt="Vem treinar conosco!" data-es="¡Ven a entrenar con nosotros!">Vem treinar
-          conosco!</strong>
+        <span class="d-inline-group">
+          <span lang="pt">Conheça a academia For Fit.</span>
+          <span lang="es">Conoce el gimnasio For Fit.</span>
+        </span><br>
+        <strong class="highlight">
+          <span lang="pt">Vem treinar conosco!</span>
+          <span lang="es">¡Ven a entrenar con nosotros!</span>
+        </strong>
       </p>
       <a href="https://wa.me/554796951904?text=Olá,%20vim%20do%20site%20e%20tenho%20interesse%20em%20fazer%20parte%20do%20time%21"
-        target="_blank" class="btn btn-primary btn-large mt-4" data-pt="Quero Me Matricular"
-        data-es="Quiero Inscribirme">Quero Me Matricular</a>
+        target="_blank" class="btn btn-primary btn-large mt-4">
+        <span lang="pt">Quero Me Matricular</span>
+        <span lang="es">Quiero Inscribirme</span>
+      </a>
     </div>
   </section>
 
   <section id="aeo-summary" style="display:none;">
     <h2>Sobre a For Fit Ciudad del Este</h2>
     <p>
-      Fundada por Vanderlei Vinck Buz, a For Fit oferece musculação e condicionamento físico,
-      em Ciudad del Este, no Paraguai, favorecendo sua saúde física e mental.
+      <span lang="pt">
+        Fundada por Vanderlei Vinck Buz, a For Fit oferece musculação e condicionamento físico,
+        em Ciudad del Este, no Paraguai, favorecendo sua saúde física e mental.
+      </span>
+      <span lang="es">
+        Fundada por Vanderlei Vinck Buz, a For Fit oferece musculación y acondicionamiento físico,
+        en Ciudad del Este, Paraguay, favoreciendo tu salud física y mental.
+      </span>
     </p>
   </section>
 
   <!-- Benefits Section -->
-  <section class="benefits">
+  <section class="benefits" id="beneficios">
     <div class="container">
-      <h2 class="section-title text-center" data-pt="BENEFÍCIOS DE SE MATRICULAR NA FOR FIT"
-        data-es="BENEFICIOS DE INSCRIBIRSE EN FOR FIT">BENEFÍCIOS DE SE MATRICULAR NA FOR FIT</h2>
+      <h2 class="section-title text-center">
+        <span lang="pt">BENEFÍCIOS DE SE MATRICULAR NA FOR FIT</span>
+        <span lang="es">BENEFICIOS DE INSCRIBIRSE EN FOR FIT</span>
+      </h2>
 
-      <div class="benefits-grid">
-        <div class="benefit-card">
+      <ul class="benefits-grid" style="list-style: none; padding: 0; margin: 0;">
+        <li class="benefit-card">
           <div class="benefit-icon">🥇</div>
-          <p data-pt="1ª Avaliação física gratuita" data-es="1ª Evaluación física gratuita">1ª Avaliação física gratuita
+          <p>
+            <span lang="pt">1ª Avaliação física gratuita</span>
+            <span lang="es">1ª Evaluación física gratuita</span>
           </p>
-        </div>
-        <div class="benefit-card">
+        </li>
+        <li class="benefit-card">
           <div class="benefit-icon">🎯</div>
-          <p data-pt="Treino individualizado" data-es="Entrenamiento individualizado">Treino individualizado</p>
-        </div>
-        <div class="benefit-card">
+          <p>
+            <span lang="pt">Treino individualizado</span>
+            <span lang="es">Entrenamiento individualizado</span>
+          </p>
+        </li>
+        <li class="benefit-card">
           <div class="benefit-icon">📱</div>
-          <p data-pt="Aplicativo exclusivo para alunos" data-es="Aplicación exclusiva para alumnos">Aplicativo exclusivo
-            para alunos</p>
-        </div>
-        <div class="benefit-card">
+          <p>
+            <span lang="pt">Aplicativo exclusivo para alunos</span>
+            <span lang="es">Aplicación exclusiva para alumnos</span>
+          </p>
+        </li>
+        <li class="benefit-card">
           <div class="benefit-icon">🤝</div>
-          <p data-pt="Professores em sala para auxiliar" data-es="Profesores en sala para guiarte">Professores em sala
-            para auxiliar</p>
-        </div>
-        <div class="benefit-card">
+          <p>
+            <span lang="pt">Professores em sala para auxiliar</span>
+            <span lang="es">Profesores en sala para guiarte</span>
+          </p>
+        </li>
+        <li class="benefit-card">
           <div class="benefit-icon">🎁</div>
-          <p data-pt="Sorteio todo mês com brindes de até R$ 200"
-            data-es="Sorteo todos los meses con premios de hasta R$ 200">Sorteio todo mês com brindes de até R$ 200</p>
-        </div>
-      </div>
+          <p>
+            <span lang="pt">Sorteio todo mês com brindes de até R$ 200</span>
+            <span lang="es">Sorteo todos los meses con premios de hasta R$ 200</span>
+          </p>
+        </li>
+      </ul>
     </div>
   </section>
 
   <!-- Therapy Section -->
-  <section class="therapy bg-darker">
+  <section class="therapy bg-darker" id="terapia">
     <div class="container">
-      <h2 class="section-title text-center" data-pt="NÃO É APENAS SOBRE SER FITNESS"
-        data-es="NO SE TRATA SOLO DE SER FITNESS">NÃO É APENAS SOBRE SER FITNESS</h2>
+      <h2 class="section-title text-center">
+        <span lang="pt">NÃO É APENAS SOBRE SER FITNESS</span>
+        <span lang="es">NO SE TRATA SOLO DE SER FITNESS</span>
+      </h2>
       <div class="therapy-grid">
         <div class="therapy-list">
           <ul>
-            <li><span class="bullet"></span><span data-pt="É TERAPIA" data-es="ES TERAPIA">É TERAPIA</span></li>
-            <li><span class="bullet"></span><span data-pt="É REMÉDIO" data-es="ES MEDICINA">É REMÉDIO</span></li>
-            <li><span class="bullet"></span><span data-pt="É PAZ EM MOVIMENTO" data-es="ES PAZ EN MOVIMIENTO">É PAZ EM
-                MOVIMENTO</span></li>
-            <li><span class="bullet"></span><span data-pt="É FORÇA MENTAL" data-es="ES FUERZA MENTAL">É FORÇA
-                MENTAL</span></li>
-            <li><span class="bullet"></span><span data-pt="É SAÚDE MENTAL" data-es="ES SALUD MENTAL">É SAÚDE
-                MENTAL</span></li>
-            <li><span class="bullet"></span><span data-pt="É AUTOCUIDADO" data-es="ES AUTOCUIDADO">É AUTOCUIDADO</span>
+            <li><span class="bullet"></span><span class="d-inline-group"><span lang="pt">É TERAPIA</span><span
+                  lang="es">ES TERAPIA</span></span></li>
+            <li><span class="bullet"></span><span class="d-inline-group"><span lang="pt">É REMÉDIO</span><span
+                  lang="es">ES MEDICINA</span></span></li>
+            <li><span class="bullet"></span><span class="d-inline-group"><span lang="pt">É PAZ EM MOVIMENTO</span><span
+                  lang="es">ES PAZ EN MOVIMIENTO</span></span></li>
+            <li><span class="bullet"></span><span class="d-inline-group"><span lang="pt">É FORÇA MENTAL</span><span
+                  lang="es">ES FUERZA MENTAL</span></span></li>
+            <li><span class="bullet"></span><span class="d-inline-group"><span lang="pt">É SAÚDE MENTAL</span><span
+                  lang="es">ES SALUD MENTAL</span></span></li>
+            <li><span class="bullet"></span><span class="d-inline-group"><span lang="pt">É AUTOCUIDADO</span><span
+                  lang="es">ES AUTOCUIDADO</span></span>
             </li>
-            <li><span class="bullet"></span><span data-pt="É AUTOCONFIANÇA" data-es="ES AUTOCONFIANZA">É
-                AUTOCONFIANÇA</span></li>
+            <li><span class="bullet"></span><span class="d-inline-group"><span lang="pt">É AUTOCONFIANÇA</span><span
+                  lang="es">ES AUTOCONFIANZA</span></span></li>
           </ul>
-          <p class="therapy-conclusion highlight-text mt-4"
-            data-pt="É SIMPLES: O CRESCIMENTO PESSOAL COMEÇA NA SUA TRANSFORMAÇÃO FÍSICA"
-            data-es="ES SIMPLE: EL CRECIMIENTO PERSONAL COMIENZA EN TU TRANSFORMACIÓN FÍSICA">
-            É SIMPLES: O CRESCIMENTO PESSOAL COMEÇA NA SUA TRANSFORMAÇÃO FÍSICA
+          <p class="therapy-conclusion highlight-text mt-4">
+            <span lang="pt">É SIMPLES: O CRESCIMENTO PESSOAL COMEÇA NA SUA TRANSFORMAÇÃO FÍSICA</span>
+            <span lang="es">ES SIMPLE: EL CRECIMIENTO PERSONAL COMIENZA EN TU TRANSFORMACIÓN FÍSICA</span>
           </p>
         </div>
         <div class="therapy-image">
-          <img src="./assets/diagrama.jpg" alt="A academia é terapia" class="rounded-image" loading="lazy">
+          <img src="https://liberom.github.io/for-fit/assets/diagrama.jpg" alt="A academia é terapia"
+            class="rounded-image" loading="lazy">
         </div>
       </div>
     </div>
@@ -239,13 +359,17 @@
   <section class="split-banner row-reverse">
     <div class="container split-container">
       <div class="split-text">
-        <h2 data-pt="Quer ter resultados de verdade?" data-es="¿Quieres resultados de verdad?">Quer ter resultados de
-          verdade?</h2>
-        <h3 class="highlight-text" data-pt="VEM PRO NOSSO TIME!" data-es="¡ÚNETE A NUESTRO EQUIPO!">VEM PRO NOSSO TIME!
+        <h2>
+          <span lang="pt">Quer ter resultados de verdade?</span>
+          <span lang="es">¿Quieres resultados de verdad?</span>
+        </h2>
+        <h3 class="highlight-text">
+          <span lang="pt">VEM PRO NOSSO TIME!</span>
+          <span lang="es">¡ÚNETE A NUESTRO EQUIPO!</span>
         </h3>
       </div>
       <div class="split-image">
-        <img src="./assets/lembre.jpg" alt="Treino focado" loading="lazy">
+        <img src="https://liberom.github.io/for-fit/assets/lembre.jpg" alt="Treino focado" loading="lazy">
       </div>
     </div>
   </section>
@@ -254,12 +378,17 @@
   <section class="split-banner">
     <div class="container split-container">
       <div class="split-text">
-        <h2 data-pt="Transforme seu Corpo e Mente" data-es="Transforma tu Cuerpo y Mente">Transforme seu Corpo e Mente
+        <h2>
+          <span lang="pt">Transforme seu Corpo e Mente</span>
+          <span lang="es">Transforma tu Cuerpo y Mente</span>
         </h2>
-        <h3 class="highlight-text" data-pt="FOCO TOTAL" data-es="ENFOQUE TOTAL">FOCO TOTAL</h3>
+        <h3 class="highlight-text">
+          <span lang="pt">FOCO TOTAL</span>
+          <span lang="es">ENFOQUE TOTAL</span>
+        </h3>
       </div>
       <div class="split-image">
-        <img src="./assets/disciplina.jpg" alt="Disciplina e foco" loading="lazy">
+        <img src="https://liberom.github.io/for-fit/assets/disciplina.jpg" alt="Disciplina e foco" loading="lazy">
       </div>
     </div>
   </section>
@@ -267,9 +396,9 @@
   <!-- Quote Banner -->
   <section class="quote-banner">
     <div class="container">
-      <blockquote data-pt="Ir pra academia é muito mais sobre constância do que altas cargas"
-        data-es="Ir al gimnasio tiene mucho más que ver con la constancia que con cargas altas">
-        "Ir pra academia é muito mais sobre constância do que altas cargas"
+      <blockquote>
+        <span lang="pt">"Ir pra academia é muito mais sobre constância do que altas cargas"</span>
+        <span lang="es">"Ir al gimnasio tiene mucho más que ver con la constancia que con cargas altas"</span>
       </blockquote>
     </div>
   </section>
@@ -277,7 +406,10 @@
   <!-- Location & Contact -->
   <section class="contact-location bg-darker" id="contato">
     <div class="container">
-      <h2 class="section-title text-center" data-pt="Onde Estamos" data-es="Dónde Estamos">Onde Estamos</h2>
+      <h2 class="section-title text-center">
+        <span lang="pt">Onde Estamos</span>
+        <span lang="es">Dónde Estamos</span>
+      </h2>
       <div class="contact-grid">
         <div class="map-container">
           <iframe
@@ -286,27 +418,107 @@
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="contact-info">
-          <img src="./assets/logo_hollow.jpg" alt="For Fit Logo" class="contact-logo" loading="lazy">
+          <img src="https://liberom.github.io/for-fit/assets/logo_hollow.jpg" alt="For Fit Logo" class="contact-logo"
+            loading="lazy">
           <div class="contact-details">
             <span class="logo-text">
-              <span class="logo-part-for" data-pt="For" data-es="For">FOR</span><span class="logo-part-fit"
-                data-pt="Fit" data-es="Fit">Fit</span>
-              <span class="logo-part-academia" data-pt="Academia" data-es="Gimnasio">Academia</span>
+              <span class="logo-part-for">FOR</span><span class="logo-part-fit">Fit</span>
+              <span class="logo-part-academia">
+                <span lang="pt">Academia</span>
+                <span lang="es">Gimnasio</span>
+              </span>
             </span>
-            <p data-pt="Km 7, Ciudad del Este - Paraguai" data-es="Km 7, Ciudad del Este - Paraguay">Km 7, Ciudad del
-              Este - Paraguai</p>
+            <p>
+              <span lang="pt">Km 7, Ciudad del Este - Paraguai</span>
+              <span lang="es">Km 7, Ciudad del Este - Paraguay</span>
+            </p>
 
             <a href="https://wa.me/554796951904?text=Olá,%20vim%20do%20site%20e%20tenho%20interesse%20em%20fazer%20parte%20do%20time%21"
-              target="_blank" class="btn btn-primary w-full mt-4" data-pt="Chamar no WhatsApp"
-              data-es="Hablar por WhatsApp">
-              <span class="whatsapp-icon">💬</span> Chamar no WhatsApp
+              target="_blank" class="btn btn-primary w-full mt-4">
+              <span lang="pt"><span class="whatsapp-icon">💬</span> Chamar no WhatsApp</span>
+              <span lang="es"><span class="whatsapp-icon">💬</span> Hablar por WhatsApp</span>
             </a>
-            <a href="https://www.instagram.com/forfit.cde/" target="_blank" class="btn btn-outline w-full mt-2"
-              data-pt="Acessar Instagram" data-es="Acceder a Instagram">
-              📸 Acessar Instagram
+            <a href="https://www.instagram.com/forfit.cde/" target="_blank" class="btn btn-outline w-full mt-2">
+              <span lang="pt">📸 Acessar Instagram</span>
+              <span lang="es">📸 Acceder a Instagram</span>
             </a>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section bg-darker" id="faq">
+    <div class="container">
+      <h2 class="section-title text-center">
+        <span lang="pt">PERGUNTAS FREQUENTES</span>
+        <span lang="es">PREGUNTAS FRECUENTES</span>
+      </h2>
+      <div class="faq-grid" style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;">
+
+        <details class="faq-item"
+          style="background-color: #111; padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); cursor: pointer;">
+          <summary style="font-weight: 600; font-size: 1.1rem; color: var(--primary);">
+            <span lang="pt">Onde fica a academia For Fit em Ciudad del Este?</span>
+            <span lang="es">¿Dónde queda el gimnasio For Fit en Ciudad del Este?</span>
+          </summary>
+          <p style="margin-top: 1rem; color: var(--text-light); line-height: 1.5;">
+            <span lang="pt">A For Fit está localizada no Km 7, Calle Lima, em Ciudad del Este, Paraguai.</span>
+            <span lang="es">For Fit se encuentra en el Km 7, Calle Lima, en Ciudad del Este, Paraguay.</span>
+          </p>
+        </details>
+
+        <details class="faq-item"
+          style="background-color: #111; padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); cursor: pointer;">
+          <summary style="font-weight: 600; font-size: 1.1rem; color: var(--primary);">
+            <span lang="pt">Quais os horários de funcionamento?</span>
+            <span lang="es">¿Cuáles son los horarios de atención?</span>
+          </summary>
+          <p style="margin-top: 1rem; color: var(--text-light); line-height: 1.5;">
+            <span lang="pt">Funcionamos de segunda a sexta das 06:00 às 22:00, e aos sábados das 08:00 às 14:00.</span>
+            <span lang="es">Atendemos de lunes a viernes de 06:00 a 22:00, y los sábados de 08:00 a 14:00.</span>
+          </p>
+        </details>
+
+        <details class="faq-item"
+          style="background-color: #111; padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); cursor: pointer;">
+          <summary style="font-weight: 600; font-size: 1.1rem; color: var(--primary);">
+            <span lang="pt">Qual o valor da mensalidade?</span>
+            <span lang="es">¿Cuál es el valor de la mensualidad?</span>
+          </summary>
+          <p style="margin-top: 1rem; color: var(--text-light); line-height: 1.5;">
+            <span lang="pt">Nossos planos começam a partir de R$ 110. Aceitamos pagamentos em Reais e Guaranis.</span>
+            <span lang="es">Nuestros planes comienzan a partir de R$ 110. Aceptamos pagos en Reales y Guaraníes.</span>
+          </p>
+        </details>
+
+        <details class="faq-item"
+          style="background-color: #111; padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); cursor: pointer;">
+          <summary style="font-weight: 600; font-size: 1.1rem; color: var(--primary);">
+            <span lang="pt">Preciso agendar a avaliação física gratuita?</span>
+            <span lang="es">¿Necesito agendar la evaluación física gratuita?</span>
+          </summary>
+          <p style="margin-top: 1rem; color: var(--text-light); line-height: 1.5;">
+            <span lang="pt">Sim, recomendamos agendar a avaliação física gratuita pelo nosso WhatsApp com
+              antecedência.</span>
+            <span lang="es">Sí, recomendamos agendar la evaluación física gratuita por nuestro WhatsApp con
+              antelación.</span>
+          </p>
+        </details>
+
+        <details class="faq-item"
+          style="background-color: #111; padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); cursor: pointer;">
+          <summary style="font-weight: 600; font-size: 1.1rem; color: var(--primary);">
+            <span lang="pt">Posso cancelar meu plano facilmente?</span>
+            <span lang="es">¿Puedo cancelar mi plan fácilmente?</span>
+          </summary>
+          <p style="margin-top: 1rem; color: var(--text-light); line-height: 1.5;">
+            <span lang="pt">Sim, nossos planos não possuem fidelidade rígida e o cancelamento é facilitado.</span>
+            <span lang="es">Sí, nuestros planes no tienen fidelidad obligatoria y la cancelación es fácil.</span>
+          </p>
+        </details>
+
       </div>
     </div>
   </section>
@@ -315,11 +527,14 @@
   <footer class="footer">
     <div class="container text-center">
       <img src="./assets/logo_mini_transparent.png" alt="For Fit" class="footer-logo">
-      <p class="mt-4" data-pt="&copy; 2024 For Fit Academia. Todos os direitos reservados."
-        data-es="&copy; 2024 Gimnasio For Fit. Todos los derechos reservados.">&copy; 2024 For Fit Academia. Todos os
-        direitos reservados.</p>
-      <p class="mt-2" style="font-size: 0.9rem; color: var(--text-muted);" data-pt="Feito por" data-es="Hecho por">
-        Feito por <a href="https://liberom.github.io/vynix-sys" target="_blank" class="link-yellow">Vynix</a>
+      <p class="mt-4">
+        <span lang="pt">&copy; 2024 For Fit Academia. Todos os direitos reservados.</span>
+        <span lang="es">&copy; 2024 Gimnasio For Fit. Todos los derechos reservados.</span>
+      </p>
+      <p class="mt-2" style="font-size: 0.9rem; color: var(--text-muted);">
+        <span lang="pt">Feito por </span>
+        <span lang="es">Hecho por </span>
+        <a href="https://liberom.github.io/vynix-sys" target="_blank" class="link-yellow">Vynix</a>
       </p>
     </div>
   </footer>
@@ -352,30 +567,7 @@
 
       document.documentElement.lang = currentLang === 'pt' ? 'pt-BR' : 'es';
 
-      // Swap text for elements with data attributes
-      const elements = document.querySelectorAll('[data-pt]');
-      elements.forEach(el => {
-        const text = el.getAttribute(`data-${currentLang}`);
-        if (text) {
-          if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-            el.placeholder = text;
-          } else if (el.tagName === 'META') {
-            el.content = text;
-          } else {
-            // Preserve inner HTML like strong elements if needed, but doing simple textContent for most
-            if (el.children.length > 0 && el.innerHTML.includes('<strong')) {
-              // this is tricky, let's keep it simple: direct text update for simple tags
-            }
-            el.textContent = text;
-          }
-        }
-      });
-
-      // Re-bind complex HTML element explicitly if necessary (Hero subtitle has strong tag inside)
-      const heroSubtitleHighlight = document.querySelector('.hero-subtitle .highlight');
-      if (heroSubtitleHighlight) heroSubtitleHighlight.textContent = heroSubtitleHighlight.getAttribute(`data-${currentLang}`);
-      const heroSubtitleSpan = document.querySelector('.hero-subtitle span');
-      if (heroSubtitleSpan) heroSubtitleSpan.textContent = heroSubtitleSpan.getAttribute(`data-${currentLang}`);
+      // Language switching is now handled by CSS leveraging html[lang]
     });
   </script>
 </body>
